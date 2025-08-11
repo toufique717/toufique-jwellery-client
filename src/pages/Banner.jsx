@@ -32,149 +32,42 @@ const Banner = () => {
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
     return (
-        <div>
 
-
-
-            <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        onAutoplayTimeLeft={onAutoplayTimeLeft}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-
-         <img
-              src={image1}
-     
-         />
- 
+     <div className=" "> {/* Parent fixed height */}
+  <Swiper
+    spaceBetween={30}
+    centeredSlides={true}
+    autoplay={{
+      delay: 2500,
+      disableOnInteraction: false,
+    }}
+    pagination={{
+      clickable: true,
+    }}
+    navigation={true}
+    modules={[Autoplay, Pagination, Navigation]}
+    onAutoplayTimeLeft={onAutoplayTimeLeft}
+    className="h-full" // Swiper takes full parent height
+  >
+    {[image1, image2, image3, image4, image5, image6, image7, image8, image9, image4].map(
+      (img, i) => (
+        <SwiperSlide key={i} className="h-full">
+          <img src={img} alt="" className="w-full h-full object-cover" />
         </SwiperSlide>
+      )
+    )}
+
+    <div className="autoplay-progress" slot="container-end">
+      <svg viewBox="0 0 48 48" ref={progressCircle}>
+        <circle cx="24" cy="24" r="20"></circle>
+      </svg>
+      <span ref={progressContent}></span>
+    </div>
+  </Swiper>
+</div>
 
 
-
-        <SwiperSlide>
-
-         <img
-              src={image2}
-     
-         />
- 
-        </SwiperSlide>
-
-
-
-        <SwiperSlide>
-
-         <img
-              src={image3}
-     
-         />
- 
-        </SwiperSlide>
-
-
-
-        <SwiperSlide>
-
-         <img
-              src={image4}
-     
-         />
- 
-        </SwiperSlide>
-
-
-
-
-        <SwiperSlide>
-
-         <img
-              src={image5}
-     
-         />
- 
-        </SwiperSlide>
-
-
-
-        <SwiperSlide>
-
-         <img
-              src={image6}
-     
-         />
- 
-        </SwiperSlide>
-
-
-        <SwiperSlide>
-
-         <img
-              src={image7}
-     
-         />
- 
-        </SwiperSlide>
-
-
-
-
-
-        <SwiperSlide>
-
-         <img
-              src={image8}
-     
-         />
- 
-        </SwiperSlide>
-
-
-
-
-
-        <SwiperSlide>
-
-         <img
-              src={image9}
-     
-         />
- 
-        </SwiperSlide>
-
-
-
-
-        <SwiperSlide>
-
-         <img
-              src={image4}
-     
-         />
- 
-        </SwiperSlide>
-
-
- 
-        <div className="autoplay-progress" slot="container-end">
-          <svg viewBox="0 0 48 48" ref={progressCircle}>
-            <circle cx="24" cy="24" r="20"></circle>
-          </svg>
-          <span ref={progressContent}></span>
-        </div>
-      </Swiper>
-            
-        </div>
+         
     );
 };
 
