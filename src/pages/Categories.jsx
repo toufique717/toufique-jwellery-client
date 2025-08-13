@@ -16,6 +16,7 @@ import image1 from "../assets/chains.jpg"
 import image2 from "../assets/Earrings.jpg"
 import image3 from "../assets/neckless.jpg"
 import image4 from "../assets/pendants.jpg"
+
 import image5 from "../assets/rings.jpg"
 import Sectiontitle from './Sectiontitle';
  
@@ -40,7 +41,7 @@ const Categories = () => {
           
   <div className="max-w-96 w-full"> {/* Make width full up to max width */}
     <Swiper
-      effect={'cards'}
+     
       grabCursor={true}
       modules={[EffectCards]}
       className="mySwiper"
