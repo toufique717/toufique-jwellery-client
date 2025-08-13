@@ -17,12 +17,27 @@ import image2 from "../assets/Earrings.jpg"
 import image3 from "../assets/neckless.jpg"
 import image4 from "../assets/pendants.jpg"
 import image5 from "../assets/rings.jpg"
+import Sectiontitle from './Sectiontitle';
  
 
 
 const Categories = () => {
     return (
-        <div className="flex justify-center items-center min-h-screen">
+
+        
+        <div>
+
+          <Sectiontitle
+          heading={"--From 11:00am to 10:00pm--"}
+          subheading={"ORDER NOW"}>
+
+          </Sectiontitle>
+
+
+
+           <div className="flex justify-center items-center min-h-screen">
+
+          
   <div className="max-w-96 w-full"> {/* Make width full up to max width */}
     <Swiper
       effect={'cards'}
@@ -99,6 +114,7 @@ const Categories = () => {
   </div>
 </div>
 
+        </div>
     );
 };
 
