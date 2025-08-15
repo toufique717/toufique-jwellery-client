@@ -3,6 +3,8 @@ import Banner from './Banner';
 import Orderonline from './Orderonline';
 import Categories from './Categories';
 import Popularitem from './Popularitem';
+import Bgorderonline from './Bgorderonline';
+import Testimonial from './Testimonial';
 
 const Home = () => {
     return (
@@ -18,6 +20,8 @@ const Home = () => {
             <Categories></Categories>
 
             <Popularitem></Popularitem>
+            <Bgorderonline></Bgorderonline>
+            <Testimonial></Testimonial>
             
         </div>
     );
