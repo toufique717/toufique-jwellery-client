@@ -5,6 +5,8 @@ import Categories from './Categories';
 import Popularitem from './Popularitem';
 import Bgorderonline from './Bgorderonline';
 import Testimonial from './Testimonial';
+import Backimage from './Backimage';
+import Callus from './Callus';
 
 const Home = () => {
     return (
@@ -18,9 +20,11 @@ const Home = () => {
             {/* <Orderonline></Orderonline> */}
 
             <Categories></Categories>
+            <Backimage></Backimage>
 
             <Popularitem></Popularitem>
             <Bgorderonline></Bgorderonline>
+            <Callus></Callus>
             <Testimonial></Testimonial>
             
         </div>
