@@ -7,12 +7,15 @@ import Bgorderonline from './Bgorderonline';
 import Testimonial from './Testimonial';
 import Backimage from './Backimage';
 import Callus from './Callus';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
     return (
         <div>
 
-            <h1> This is Home</h1>
+             <Helmet>
+                <title>Toufique Jwellery Shop</title>
+             </Helmet>
             <div className=''>
                  <Banner></Banner>
             </div>
