@@ -2,24 +2,28 @@ import React, { useEffect, useState } from 'react';
 import Sectiontitle from './Sectiontitle';
 
 import Popular from '../shared/Popular';
+import useproduct from '../hooks/useproducts';
 
 const Popularitem = () => {
 
-    const[menu,setmenu] = useState([])
+    const[menu] = useproduct();
+    const popular = menu.filter(product =>product.category === 'popular')
 
-    useEffect(()=>
-    {
+    // const[menu,setmenu] = useState([])
 
-        fetch('menu.json')
-        .then(res=>res.json())
-        .then(data=>
-        {
-             const popularitem = data.filter(item=>item.category === 'popular');
-             setmenu(popularitem);
-        }
-        )
+    // useEffect(()=>
+    // {
 
-    },[])
+    //     fetch('menu.json')
+    //     .then(res=>res.json())
+    //     .then(data=>
+    //     {
+    //          const popularitem = data.filter(item=>item.category === 'popular');
+    //          setmenu(popularitem);
+    //     }
+    //     )
+
+    // },[])
     return (
         <div>
             <section>
@@ -39,7 +43,7 @@ const Popularitem = () => {
 
 
                 {
-                    menu.map(item=><Popular
+                    popular.map(item=><Popular
                     key={item._id}
                     item={item}></Popular>)
                 }
