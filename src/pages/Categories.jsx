@@ -14,6 +14,7 @@ import { EffectCards } from 'swiper/modules';
 
 import image1 from "../assets/chains.jpg"
 import image2 from "../assets/Earrings.jpg"
+
 import image3 from "../assets/neckless.jpg"
 import image4 from "../assets/pendants.jpg"
 
